@@ -1,0 +1,125 @@
+/* stylesheet for the  blog post page */
+
+.blog-main {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      /* grid-template-rows: 150px auto; */
+      grid-auto-rows: auto;
+      grid-template-areas:
+          "hd hd hd hd hd hd hd hd"
+          "main main main main main sd sd sd"
+          "ft ft ft ft ft ft ft ft";
+  }
+  
+  .content-blog {
+      grid-area: main;
+      background-color: rgb(240, 240, 240);
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  }
+  
+  .post-body {
+      padding: 20px;
+  }
+  
+  /* set blog post image to fit viewport size */
+  .post-body img {
+      width: 100%;
+  }
+  
+  .post-body blockquote {
+      background-color: #fff;
+      padding: 10px;
+      font-size: 18px;
+  }
+  
+  .sidebar h1 {
+      margin-top: 44px;
+  }
+  
+  .sidebar h2 {
+      margin: 20px 0 10px 0;
+      line-height: 36px;
+  }
+  
+  .sidebar h2 a:hover {
+      color: #008bb9;
+  }
+  
+  .sidebar h2 a {
+      color: #00bfff;
+  }
+  
+  .article-item {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .avatar img {
+      border-radius: 100px;
+  }
+  
+  .author {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+  }
+  
+  .author-bio {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+  }
+  
+  .author-bio p {
+      margin: 2px;
+  }
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 600px) {
+      .blog-main {
+          display: grid;
+          grid-template-columns: auto;
+          grid-auto-rows: auto;
+          grid-template-areas:
+              "hd hd hd hd hd hd hd hd"
+              "main main main main main main main main"
+              "sd sd sd sd sd sd sd sd"
+              "ft ft ft ft ft ft ft ft";
+      }
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 601px) and (max-width: 960px) {
+      .blog-main {
+          display: grid;
+          grid-template-columns: auto;
+          grid-auto-rows: auto;
+          grid-template-areas:
+              "hd hd hd hd hd hd hd hd"
+              "main main main main main main main main"
+              "sd sd sd sd sd sd sd sd"
+              "ft ft ft ft ft ft ft ft";
+      }
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+      .blog-main {
+          display: grid;
+          grid-template-columns: 300px 300px 300px;
+          grid-auto-rows: auto;
+          grid-template-areas:
+              "hd hd hd hd hd hd hd hd"
+              "main main main main main main sd sd"
+              "ft ft ft ft ft ft ft ft";
+      }
+  }
+  
